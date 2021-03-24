@@ -5,10 +5,10 @@ import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
 class ListCategoriesController {
   constructor(private listCategoriesUseCase: ListCategoriesUseCase) {}
 
-  handle(request: Request, response: Response): Response {
-    const all = this.listCategoriesUseCase.execute();
+  async handle(request: Request, response: Response): Promise<Response> {
+    const all = await this.listCategoriesUseCase.execute();
 
-    return response.json(all);
+    return response.status(200).json(all);
   }
 }
 
