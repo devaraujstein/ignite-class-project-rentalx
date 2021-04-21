@@ -15,6 +15,8 @@ services:
       - pgdata:/data/postgres
   app:
     build: .
+    links:
+      - database_ignite
     depends_on:
       - database_ignite
     container_name: rentx
