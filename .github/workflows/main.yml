@@ -31,5 +31,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: "., !node_modules"
-          target: "~/app/ignite-class-project-rentalx"
-          disable-caching: true
+          target: "~/app/ignite-class-project-rentalx/"
