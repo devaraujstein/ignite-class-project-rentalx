@@ -32,6 +32,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "., !node_modules"
           target: "~/app/ignite-class-project-rentalx"
+          
       - name: Update API
         uses: appleboy/ssh-action@master
         with:
